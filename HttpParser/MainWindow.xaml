@@ -6,7 +6,16 @@
         xmlns:local="clr-namespace:HttpParser"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+		<Grid DockPanel.Dock="Top">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition Width="0.4*"/>
+			</Grid.ColumnDefinitions>
+			<TextBox Name="textboxAddress"></TextBox>
+			<Button Name="btnStart" Grid.Column="1" Click="btnStart_Click">Start</Button>
+		</Grid>
+
+		<DataGrid Name="myOutput"  ColumnWidth="*"></DataGrid>
+    </DockPanel>
 </Window>
